@@ -12,6 +12,9 @@ app.use(express.json());
 const apiKey = process.env.BLAND_API_KEY;
 const PORT = process.env.PORT || 4000;
 
+app.get('/', async (req, res)=>{
+  res.send("hello world");
+})
 // Handle form submissions
 app.post("/request-demo", (req, res) => {
   // Data succesfully received from Frontend
